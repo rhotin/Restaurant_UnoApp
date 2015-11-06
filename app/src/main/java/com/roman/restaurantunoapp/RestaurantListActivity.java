@@ -14,7 +14,6 @@ import java.util.ArrayList;
 public class RestaurantListActivity extends AppCompatActivity implements DownloadTask.Communicator{
 
     public static final String UNOAPP_URL = "http://api.digitalmarketingbox.com/list_companies?api_id=UNOappTest&api_secret=20c8be7c56a98a9a9746b6a0f5558c47";
-
     ListView restListView;
     ProgressBar progressBar;
     TextView messageText;
