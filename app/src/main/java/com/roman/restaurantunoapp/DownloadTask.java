@@ -68,6 +68,7 @@ public class DownloadTask extends AsyncTask<Void, Integer, Void> {
 
             int totalRestaurants = data_arr.length();
             for (int i = 0; i < totalRestaurants; i++) {
+                publishProgress((int) (((i + 1.0) / totalRestaurants) * 100.0));
 
                 rest_Name = data_arr.getJSONObject(i).getString("company_name");
                 rest_Day1 = data_arr.getJSONObject(i).getJSONObject("hour").getJSONObject("1").getString("day");
@@ -108,7 +109,6 @@ public class DownloadTask extends AsyncTask<Void, Integer, Void> {
                         rest_Day7, rest_StartTime7, rest_EndTime7,
                         rest_Phone, rest_Lat, rest_Long);
                 restaurnatsArrayList.add(obj);
-                publishProgress((int) (((i + 1.0) / totalRestaurants) * 100.0));
             }
         } catch (MalformedURLException e) {
             e.printStackTrace();
