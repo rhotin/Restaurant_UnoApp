@@ -14,7 +14,7 @@ public class SplashActivity extends AppCompatActivity implements DownloadTask.Co
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        int secondsDelayed = 1;
+        int secondsDelayed = 2;
         DownloadTask downloadTask = new DownloadTask(this);
         downloadTask.execute();
         new Handler().postDelayed(new Runnable(){

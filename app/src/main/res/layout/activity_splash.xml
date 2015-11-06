@@ -2,14 +2,39 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.roman.restaurantunoapp.SplashActivity">
+    tools:context="com.roman.restaurantunoapp.SplashActivity"
+    android:background="#00abe9">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Restaurant"
+        android:id="@+id/textView2"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:layout_above="@+id/textView3"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Directory"
+        android:id="@+id/textView3"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:id="@+id/imageView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:src="@android:drawable/ic_menu_mapmode" />
+        android:layout_marginTop="53dp"
+        android:src="@android:drawable/ic_media_play"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
