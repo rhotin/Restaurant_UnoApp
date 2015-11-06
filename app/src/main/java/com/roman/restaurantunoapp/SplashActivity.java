@@ -14,7 +14,7 @@ public class SplashActivity extends AppCompatActivity implements DownloadTask.Co
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        int secondsDelayed = 2;
+        double secondsDelayed = 1.5;
         DownloadTask downloadTask = new DownloadTask(this);
         downloadTask.execute();
         new Handler().postDelayed(new Runnable(){
@@ -22,7 +22,7 @@ public class SplashActivity extends AppCompatActivity implements DownloadTask.Co
                 startActivity(new Intent(SplashActivity.this, RestaurantListActivity.class));
                 finish();
             }
-        }, secondsDelayed *1000);
+        }, (long) (secondsDelayed * 1000));
     }
 
     @Override
